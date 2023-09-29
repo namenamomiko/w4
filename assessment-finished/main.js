@@ -7,10 +7,10 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-const storyText = '今から100年前に :insertx: は1人で歩いていました。 何も考えずに歩いていると :inserty: に到着していました。 then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
+const storyText = '今から100年前に:insertx:は1人で歩いていました。 何も考えずに歩いていると:inserty:に到着していました。その前で少し休憩をしていると突然:insertz:。それに驚いて、全力で家まで走って帰りました。— :insertx:は家に帰って体重計に乗ってみると、走って帰ってきたので、1キログラム体重が減っていました。';
 const insertX = ['妹', 'お母さん', 'お父さん'];
 const insertY = ['家', '学校', '塾'];
-const insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
+const insertZ = ['悲鳴が聞こえてきました。', '雷が鳴りました。', '怒鳴り声が聞こえてきました。'];
 
 randomize.addEventListener('click', result);
 
