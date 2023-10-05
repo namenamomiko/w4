@@ -7,10 +7,10 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-const storyText = '今から100年前に:insertx:は1人で歩いていました。 何も考えずに歩いていると:inserty:に到着していました。その前で少し休憩をしているとみきに会いました。突然:insertz:。みきはそれに驚いて走ってどこかに行ってしまったのでそれを追いかけました。— :insertx:は家に帰って体重計に乗ってみると、体重が50kgでした。';
-const insertX = ['妹', 'お母さん', 'お父さん'];
-const insertY = ['家', '学校', '塾'];
-const insertZ = ['悲鳴が聞こえてきました。', '雷が鳴りました。', '怒鳴り声が聞こえてきました。'];
+const storyText = '東京には沢山のスポットがあり、多くの人で溢れかえっている情報過多な街である。地方出身の衣織は、街並みを視界におさめるだけでも体力を奪われてしまう気がした。だから:inserty:に着いた時、自分という人間を忘れそうになった。だって人通りが激しいと、衣織はただの「通行人A」に過ぎないから。「東京の人はみんな早歩きで忙しそうだな。でも、誰も私について深く追及してこないのは:insertz:。」衣織は、そっと:insertx:に電話した。「私の馬鹿話を聞いてくれ」と。';
+const insertX = ['母親','ある人','友達'];
+const insertY = ['新宿','浅草','表参道'];
+const insertZ = ['少し寂しくなった','とても嬉しかった','腹が立った'];
 
 randomize.addEventListener('click', result);
 
@@ -20,20 +20,17 @@ function result() {
   const xItem = randomValueFromArray(insertX);
   const yItem = randomValueFromArray(insertY);
   const zItem = randomValueFromArray(insertZ);
+ 
 
-  newStory = newStory.replace(':insertx:',xItem);
   newStory = newStory.replace(':insertx:',xItem);
   newStory = newStory.replace(':inserty:',yItem);
   newStory = newStory.replace(':insertz:',zItem);
 
+  
+
   if (customName.value !== '') {
     const name = customName.value;
-    newStory = newStory.replace('みき', name);
-  }
-
-  if (document.getElementById("US").checked) {
-    const 体重 = `${Math.round(50*2.2)} ポンド`;
-    newStory = newStory.replace('50kg', 体重);
+    newStory = newStory.replace('衣織', name);
   }
 
   story.textContent = newStory;
