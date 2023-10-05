@@ -7,7 +7,7 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-const storyText = '今から100年前に:insertx:は1人で歩いていました。 何も考えずに歩いていると:inserty:に到着していました。その前で少し休憩をしていると突然:insertz:。それに驚いて、全力で家まで走って帰りました。— :insertx:は家に帰って体重計に乗ってみると、体重が50kgでした。';
+const storyText = '今から100年前に:insertx:は1人で歩いていました。 何も考えずに歩いていると:inserty:に到着していました。その前で少し休憩をしているとみきに会いました。突然:insertz:。みきはそれに驚いて走ってどこかに行ってしまったのでそれを追いかけました。— :insertx:は家に帰って体重計に乗ってみると、体重が50kgでした。';
 const insertX = ['妹', 'お母さん', 'お父さん'];
 const insertY = ['家', '学校', '塾'];
 const insertZ = ['悲鳴が聞こえてきました。', '雷が鳴りました。', '怒鳴り声が聞こえてきました。'];
@@ -28,14 +28,12 @@ function result() {
 
   if (customName.value !== '') {
     const name = customName.value;
-    newStory = newStory.replace('Bob', name);
+    newStory = newStory.replace('みき', name);
   }
 
-  if (document.getElementById("uk").checked) {
-    const weight = `${Math.round(300*0.0714286)} stone`;
-    const temperature =  `${Math.round((94-32) * 5 / 9)} centigrade`;
-    newStory = newStory.replace('94 fahrenheit', temperature);
-    newStory = newStory.replace('300 pounds', weight);
+  if (document.getElementById("US").checked) {
+    const 体重 = `${Math.round(50*2.2)} ポンド`;
+    newStory = newStory.replace('50kg', 体重);
   }
 
   story.textContent = newStory;
